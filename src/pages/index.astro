@@ -1,0 +1,191 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const products = [
+  {
+    name: 'F1 Cronos',
+    slug: 'f1cronos',
+    tagline: 'Live & historical Formula 1 analytics',
+    description:
+      'Dive deep into race data, lap times, driver performance, and historical stats from every Formula 1 season — all in one place.',
+    icon: '🏎️',
+    accent: 'blue',
+  },
+  {
+    name: 'Trade On',
+    slug: 'tradeon',
+    tagline: 'Configurable trading strategy alerts',
+    description:
+      'Build and configure custom trading strategies, set your own conditions, and receive real-time alerts when the market moves your way.',
+    icon: '📈',
+    accent: 'pink',
+  },
+  {
+    name: 'Petbook',
+    slug: 'petbook',
+    tagline: 'Modern pet adoption, simplified',
+    description:
+      'A friendly platform connecting animals in need with loving homes. Browse, filter, and find your perfect companion.',
+    icon: '🐾',
+    accent: 'blue',
+  },
+];
+---
+
+<Layout>
+  <!-- Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-navy/80 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="relative h-8 w-32">
+        <img src="/CeremonyLogo-removebg.png" alt="Ceremony Labs" class="absolute top-1/2 left-0 -translate-y-1/2 h-24 w-auto" />
+      </div>
+      <div class="flex items-center gap-6 text-sm text-slate-400">
+        <a href="#products" class="hover:text-white transition-colors hidden sm:block">Products</a>
+        <a href="#about" class="hover:text-white transition-colors hidden sm:block">About</a>
+        <a
+          href="#waitlist"
+          class="bg-blue-brand hover:bg-blue-600 text-white px-4 py-1.5 rounded-full transition-colors font-medium text-sm"
+        >
+          Stay updated
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20 overflow-hidden">
+    <div class="orb-blue"></div>
+    <div class="orb-pink"></div>
+    <div class="max-w-3xl mx-auto relative z-10">
+      <div
+        class="inline-flex items-center gap-2 bg-blue-brand/10 border border-blue-brand/20 rounded-full px-4 py-1.5 text-sm text-blue-light mb-8"
+      >
+        <span class="w-2 h-2 bg-blue-light rounded-full animate-pulse"></span>
+        Three products in development
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
+        Think Laboratory.<br />
+        <span
+          class="bg-gradient-to-r from-blue-light via-blue-brand to-pink-brand bg-clip-text text-transparent"
+        >
+          Ship Ceremony.
+        </span>
+      </h1>
+
+      <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-xl mx-auto leading-relaxed">
+        Ceremony Labs creates focused web applications for people who love data — whether that's
+        race lap times, trading signals, or finding the perfect pet.
+      </p>
+
+      <a
+        href="#waitlist"
+        class="inline-block bg-gradient-to-r from-blue-brand to-blue-600 hover:opacity-90 text-white font-semibold px-8 py-3 rounded-full transition-all shadow-lg shadow-blue-brand/25"
+      >
+        Get early access →
+      </a>
+    </div>
+  </section>
+
+
+  <!-- Products -->
+  <section id="products" class="py-28 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Our products</h2>
+        <p class="text-slate-400 max-w-lg mx-auto">
+          Each app is focused on one domain and built to be genuinely useful — no bloat, no
+          upsells.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        {
+          products.map((p) => (
+            <div
+              class={`rounded-2xl bg-surface border p-8 flex flex-col gap-5 hover:scale-[1.02] transition-transform duration-200 ${
+                p.accent === 'pink'
+                  ? 'border-pink-brand/20 hover:border-pink-brand/40'
+                  : 'border-blue-brand/20 hover:border-blue-brand/40'
+              }`}
+            >
+              <div class="text-4xl">{p.icon}</div>
+              <div class="flex-1">
+                <div class="flex flex-wrap items-center gap-3 mb-2">
+                  <h3 class="text-xl font-bold">{p.name}</h3>
+                  <span
+                    class={`text-xs font-medium px-2.5 py-0.5 rounded-full border ${
+                      p.accent === 'pink'
+                        ? 'bg-pink-brand/10 text-pink-light border-pink-brand/20'
+                        : 'bg-blue-brand/10 text-blue-light border-blue-brand/20'
+                    }`}
+                  >
+                    Coming soon
+                  </span>
+                </div>
+                <p
+                  class={`text-sm font-medium mb-3 ${
+                    p.accent === 'pink' ? 'text-pink-light' : 'text-blue-light'
+                  }`}
+                >
+                  {p.tagline}
+                </p>
+                <p class="text-slate-400 text-sm leading-relaxed">{p.description}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-28 px-6 border-t border-white/5">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">About Ceremony Labs</h2>
+      <p class="text-slate-400 text-lg leading-relaxed mb-5">
+        We're an independent software lab building small, focused web applications for specific
+        niches — from Formula 1 data heads to active traders to animal lovers.
+      </p>
+      <p class="text-slate-400 text-lg leading-relaxed">
+        Every product starts from a real need. We care about simplicity, speed, and actually
+        solving the problem at hand.
+      </p>
+    </div>
+  </section>
+
+  <!-- Waitlist -->
+  <section id="waitlist" class="py-28 px-6 border-t border-white/5">
+    <div class="max-w-lg mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Stay in the loop</h2>
+      <p class="text-slate-400 mb-10 leading-relaxed">
+        We're putting the finishing touches on all three products. Drop your email and we'll let
+        you know the moment they're ready.
+      </p>
+
+      <!-- Replace the div below with your Mailchimp embed code -->
+      <div class="bg-surface border border-blue-brand/20 rounded-2xl p-8">
+        <p class="text-xs text-slate-600 uppercase tracking-widest mb-5 font-medium">
+          Early access signup
+        </p>
+        <div class="flex gap-3">
+          <input
+            type="email"
+            placeholder="your@email.com"
+            class="flex-1 bg-white/5 border border-white/10 rounded-full px-4 py-2.5 text-sm focus:outline-none focus:border-blue-brand text-white placeholder:text-slate-600 transition-colors min-w-0"
+          />
+          <button
+            class="bg-gradient-to-r from-blue-brand to-pink-brand hover:opacity-90 text-white font-semibold px-6 py-2.5 rounded-full transition-opacity text-sm whitespace-nowrap"
+          >
+            Notify me
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 py-8 px-6 text-center text-sm text-slate-600">
+    © {new Date().getFullYear()} Ceremony Labs. All rights reserved.
+  </footer>
+</Layout>
