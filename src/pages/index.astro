@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const products = [
+const liveProducts = [
   {
     name: 'F1 Cronos',
     slug: 'f1cronos',
@@ -9,8 +9,24 @@ const products = [
     description:
       'Dive deep into race data, lap times, driver performance, and historical stats from every Formula 1 season — all in one place.',
     icon: '🏎️',
+    url: 'https://f1cronos.com',
+    videoId: '113uLMuT7WgoLyHk4vxpA5lA6eYDoExUU',
     accent: 'blue',
   },
+  {
+    name: 'Universo Cromos',
+    slug: 'universo-cromos',
+    tagline: 'Marketplace for collectible items',
+    description:
+      'A curated marketplace where collectors discover, buy, and sell their favourite stickers and collectible cards — managed and trusted by our team.',
+    icon: '🃏',
+    url: 'https://www.cromos-universo.com',
+    videoId: '1PnwVyrF3xE-noFvMRnnQQRrGBTAk44is',
+    accent: 'pink',
+  },
+];
+
+const products = [
   {
     name: 'Trade On',
     slug: 'tradeon',
@@ -43,10 +59,10 @@ const products = [
         <a href="#products" class="hover:text-white transition-colors hidden sm:block">Products</a>
         <a href="#about" class="hover:text-white transition-colors hidden sm:block">About</a>
         <a
-          href="#waitlist"
+          href="#contact"
           class="bg-blue-brand hover:bg-blue-600 text-white px-4 py-1.5 rounded-full transition-colors font-medium text-sm"
         >
-          Stay updated
+          Contact us
         </a>
       </div>
     </div>
@@ -61,7 +77,7 @@ const products = [
         class="inline-flex items-center gap-2 bg-blue-brand/10 border border-blue-brand/20 rounded-full px-4 py-1.5 text-sm text-blue-light mb-8"
       >
         <span class="w-2 h-2 bg-blue-light rounded-full animate-pulse"></span>
-        Three products in development
+        Two live · Two in development
       </div>
 
       <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
@@ -74,15 +90,14 @@ const products = [
       </h1>
 
       <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-xl mx-auto leading-relaxed">
-        Ceremony Labs creates focused web applications for people who love data — whether that's
-        race lap times, trading signals, or finding the perfect pet.
+        Ceremony Labs creates focused web applications for people who love data — delivering clarity, depth, and purpose-built experiences to anyone who demands more from the tools they use every day.
       </p>
 
       <a
-        href="#waitlist"
+        href="#contact"
         class="inline-block bg-gradient-to-r from-blue-brand to-blue-600 hover:opacity-90 text-white font-semibold px-8 py-3 rounded-full transition-all shadow-lg shadow-blue-brand/25"
       >
-        Get early access →
+        Get in touch →
       </a>
     </div>
   </section>
@@ -99,7 +114,70 @@ const products = [
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-6">
+      <!-- Live products -->
+      <div class="flex flex-col gap-6 mb-6">
+        {
+          liveProducts.map((p) => (
+            <div
+              class={`rounded-2xl bg-surface border p-8 hover:border-opacity-60 transition-colors duration-200 ${
+                p.accent === 'pink'
+                  ? 'border-pink-brand/30 hover:border-pink-brand/60'
+                  : 'border-blue-brand/30 hover:border-blue-brand/60'
+              }`}
+            >
+              <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Info -->
+                <div class="flex flex-col gap-5 lg:w-2/5">
+                  <div class="text-4xl">{p.icon}</div>
+                  <div class="flex-1">
+                    <div class="flex flex-wrap items-center gap-3 mb-2">
+                      <h3 class="text-xl font-bold">{p.name}</h3>
+                      <span class="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-0.5 rounded-full border bg-green-500/10 text-green-400 border-green-500/20">
+                        <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
+                        Live
+                      </span>
+                    </div>
+                    <p
+                      class={`text-sm font-medium mb-3 ${
+                        p.accent === 'pink' ? 'text-pink-light' : 'text-blue-light'
+                      }`}
+                    >
+                      {p.tagline}
+                    </p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">{p.description}</p>
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class={`inline-block hover:opacity-90 text-white font-semibold px-6 py-2.5 rounded-full transition-all text-sm ${
+                        p.accent === 'pink'
+                          ? 'bg-gradient-to-r from-pink-brand to-pink-600 shadow-lg shadow-pink-brand/25'
+                          : 'bg-gradient-to-r from-blue-brand to-blue-600 shadow-lg shadow-blue-brand/25'
+                      }`}
+                    >
+                      Visit {p.name} →
+                    </a>
+                  </div>
+                </div>
+                <!-- Video -->
+                <div class="lg:w-3/5">
+                  <div class="relative w-full rounded-xl overflow-hidden bg-black/30" style="padding-top: 56.25%;">
+                    <iframe
+                      src={`https://drive.google.com/file/d/${p.videoId}/preview`}
+                      class="absolute inset-0 w-full h-full"
+                      allow="autoplay"
+                      allowfullscreen
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+      <!-- Coming soon products -->
+      <div class="grid md:grid-cols-2 gap-6">
         {
           products.map((p) => (
             <div
@@ -141,44 +219,116 @@ const products = [
 
   <!-- About -->
   <section id="about" class="py-28 px-6 border-t border-white/5">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">About Ceremony Labs</h2>
-      <p class="text-slate-400 text-lg leading-relaxed mb-5">
-        We're an independent software lab building small, focused web applications for specific
-        niches — from Formula 1 data heads to active traders to animal lovers.
-      </p>
-      <p class="text-slate-400 text-lg leading-relaxed">
-        Every product starts from a real need. We care about simplicity, speed, and actually
-        solving the problem at hand.
-      </p>
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">About us</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
+          We're an independent software lab built by two operators who have spent their careers shipping products and running complex systems at scale. Every product we build starts from a real need — and we see it through until it actually works.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Adolfo -->
+        <div class="rounded-2xl bg-surface border border-blue-brand/20 p-8 flex flex-col items-center text-center gap-6">
+          <img
+            src="/Adolfo_Ramirez.png"
+            alt="Adolfo Ramirez"
+            class="w-32 h-32 rounded-2xl object-cover border border-blue-brand/30"
+          />
+          <div>
+            <h3 class="text-xl font-bold">Adolfo Ramirez</h3>
+            <p class="text-blue-light text-sm font-medium mt-1">CEO & Co-founder</p>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            With over two decades of international leadership experience, Adolfo has built a career
+            spanning operations, manufacturing, business development, and executive management.
+            He brings deep expertise in P&L accountability, team building, demand planning, and
+            navigating complex corporate environments across borders — the operational discipline
+            and business acumen that turns bold ideas into sustainable ventures.
+          </p>
+        </div>
+
+        <!-- Gaston -->
+        <div class="rounded-2xl bg-surface border border-pink-brand/20 p-8 flex flex-col items-center text-center gap-6">
+          <img
+            src="/Gaston_Iriarte.png"
+            alt="Gaston Iriarte"
+            class="w-32 h-32 rounded-2xl object-cover border border-pink-brand/30"
+          />
+          <div>
+            <h3 class="text-xl font-bold">Gaston Iriarte</h3>
+            <p class="text-pink-light text-sm font-medium mt-1">CTO & Co-founder</p>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            A software engineer and cloud architect with over a decade of hands-on experience
+            building scalable systems, Gaston specializes in cloud infrastructure, backend
+            development, and AI integration. Certified in cloud solutions architecture and software
+            development, he leads with a builder's mindset — obsessed with clean systems,
+            data-driven products, and shipping things that actually work.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Waitlist -->
-  <section id="waitlist" class="py-28 px-6 border-t border-white/5">
+  <!-- Contact -->
+  <section id="contact" class="py-28 px-6 border-t border-white/5">
     <div class="max-w-lg mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Stay in the loop</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact us</h2>
       <p class="text-slate-400 mb-10 leading-relaxed">
-        We're putting the finishing touches on all three products. Drop your email and we'll let
-        you know the moment they're ready.
+        Have a question, idea, or just want to say hello? We'd love to hear from you.
       </p>
 
-      <!-- Replace the div below with your Mailchimp embed code -->
       <div class="bg-surface border border-blue-brand/20 rounded-2xl p-8">
-        <p class="text-xs text-slate-600 uppercase tracking-widest mb-5 font-medium">
-          Early access signup
-        </p>
-        <div class="flex gap-3">
-          <input
-            type="email"
-            placeholder="your@email.com"
-            class="flex-1 bg-white/5 border border-white/10 rounded-full px-4 py-2.5 text-sm focus:outline-none focus:border-blue-brand text-white placeholder:text-slate-600 transition-colors min-w-0"
-          />
+        <div id="contact-form" class="flex flex-col gap-4 text-left">
+          <div>
+            <input
+              id="contact-name"
+              type="text"
+              placeholder="Your name"
+              class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-brand text-white placeholder:text-slate-600 transition-colors"
+            />
+            <p id="name-error" class="text-red-400 text-xs mt-1.5 pl-1 hidden">Please enter your name.</p>
+          </div>
+
+          <div>
+            <input
+              id="contact-email"
+              type="email"
+              placeholder="your@email.com"
+              class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-brand text-white placeholder:text-slate-600 transition-colors"
+            />
+            <p id="email-error" class="text-red-400 text-xs mt-1.5 pl-1 hidden">Please enter a valid email address.</p>
+          </div>
+
+          <div>
+            <textarea
+              id="contact-message"
+              placeholder="Your message…"
+              rows="4"
+              class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-brand text-white placeholder:text-slate-600 transition-colors resize-none"
+            ></textarea>
+            <p id="message-error" class="text-red-400 text-xs mt-1.5 pl-1 hidden">Please enter a message.</p>
+          </div>
+
           <button
-            class="bg-gradient-to-r from-blue-brand to-pink-brand hover:opacity-90 text-white font-semibold px-6 py-2.5 rounded-full transition-opacity text-sm whitespace-nowrap"
+            id="contact-btn"
+            class="w-full bg-gradient-to-r from-blue-brand to-pink-brand hover:opacity-90 text-white font-semibold px-6 py-3 rounded-xl transition-opacity text-sm mt-2"
           >
-            Notify me
+            Send message
           </button>
+        </div>
+
+        <div id="contact-success" class="hidden flex-col items-center gap-4 py-4">
+          <div class="w-12 h-12 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-400" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <p class="text-white font-semibold text-lg">Message received!</p>
+          <p class="text-slate-400 text-sm leading-relaxed text-center">
+            Thanks for reaching out. We'll get back to you as soon as possible.
+          </p>
         </div>
       </div>
     </div>
@@ -189,3 +339,51 @@ const products = [
     © {new Date().getFullYear()} Ceremony Labs. All rights reserved.
   </footer>
 </Layout>
+
+<script>
+  function isValidEmail(value: string): boolean {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  }
+
+  function setError(input: HTMLInputElement | HTMLTextAreaElement, errorEl: HTMLElement, show: boolean) {
+    if (show) {
+      errorEl.classList.remove('hidden');
+      input.classList.add('border-red-400/60');
+      input.classList.remove('border-white/10');
+    } else {
+      errorEl.classList.add('hidden');
+      input.classList.remove('border-red-400/60');
+      input.classList.add('border-white/10');
+    }
+  }
+
+  const nameInput    = document.getElementById('contact-name')    as HTMLInputElement;
+  const emailInput   = document.getElementById('contact-email')   as HTMLInputElement;
+  const messageInput = document.getElementById('contact-message') as HTMLTextAreaElement;
+  const nameError    = document.getElementById('name-error')      as HTMLElement;
+  const emailError   = document.getElementById('email-error')     as HTMLElement;
+  const messageError = document.getElementById('message-error')   as HTMLElement;
+  const form         = document.getElementById('contact-form')    as HTMLElement;
+  const success      = document.getElementById('contact-success') as HTMLElement;
+
+  document.getElementById('contact-btn')!.addEventListener('click', () => {
+    const nameOk    = nameInput.value.trim().length > 0;
+    const emailOk   = isValidEmail(emailInput.value.trim());
+    const messageOk = messageInput.value.trim().length > 0;
+
+    setError(nameInput,    nameError,    !nameOk);
+    setError(emailInput,   emailError,   !emailOk);
+    setError(messageInput, messageError, !messageOk);
+
+    if (!nameOk || !emailOk || !messageOk) return;
+
+    form.classList.add('hidden');
+    success.classList.remove('hidden');
+    success.classList.add('flex');
+  });
+
+  [nameInput, emailInput, messageInput].forEach((el, i) => {
+    const errEl = [nameError, emailError, messageError][i];
+    el.addEventListener('input', () => setError(el, errEl, false));
+  });
+</script>
