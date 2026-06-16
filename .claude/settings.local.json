@@ -3,7 +3,9 @@
     "allow": [
       "PowerShell(Move-Item \"c:\\\\Users\\\\tito_\\\\workplace\\\\ceremony-web\\\\CeremonyBackground.png\" \"c:\\\\Users\\\\tito_\\\\workplace\\\\ceremony-web\\\\public\\\\CeremonyBackground.png\")",
       "PowerShell(Move-Item \"c:\\\\Users\\\\tito_\\\\workplace\\\\ceremony-web\\\\TransparentBG1.png\" \"c:\\\\Users\\\\tito_\\\\workplace\\\\ceremony-web\\\\public\\\\TransparentBG1.png\")",
-      "PowerShell(Move-Item \"c:\\\\Users\\\\tito_\\\\workplace\\\\ceremony-web\\\\CeremonyLogo.png\" \"c:\\\\Users\\\\tito_\\\\workplace\\\\ceremony-web\\\\public\\\\CeremonyLogo.png\")"
+      "PowerShell(Move-Item \"c:\\\\Users\\\\tito_\\\\workplace\\\\ceremony-web\\\\CeremonyLogo.png\" \"c:\\\\Users\\\\tito_\\\\workplace\\\\ceremony-web\\\\public\\\\CeremonyLogo.png\")",
+      "Skill(run)",
+      "Skill(run:*)"
     ]
   }
 }
