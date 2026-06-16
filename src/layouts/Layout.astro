@@ -129,6 +129,83 @@ const { title = 'Ceremony Labs' } = Astro.props;
     }
   });
 
+  // ── Audio ──────────────────────────────────────────────────────────────
+  let audioCtx: AudioContext | null = null;
+
+  function getAC(): AudioContext {
+    if (!audioCtx) audioCtx = new AudioContext();
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    return audioCtx;
+  }
+
+  function playBubblePop() {
+    try {
+      const ac = getAC();
+      const t  = ac.currentTime;
+
+      const osc     = ac.createOscillator();
+      const oscGain = ac.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(460, t);
+      osc.frequency.exponentialRampToValueAtTime(95, t + 0.08);
+      oscGain.gain.setValueAtTime(0.07, t);
+      oscGain.gain.exponentialRampToValueAtTime(0.001, t + 0.09);
+      osc.connect(oscGain);
+      oscGain.connect(ac.destination);
+      osc.start(t);
+      osc.stop(t + 0.10);
+
+      const bufSize  = Math.floor(ac.sampleRate * 0.014);
+      const noiseBuf = ac.createBuffer(1, bufSize, ac.sampleRate);
+      const data     = noiseBuf.getChannelData(0);
+      for (let i = 0; i < bufSize; i++) data[i] = Math.random() * 2 - 1;
+      const noise     = ac.createBufferSource();
+      noise.buffer    = noiseBuf;
+      const noiseGain = ac.createGain();
+      noiseGain.gain.setValueAtTime(0.025, t);
+      noiseGain.gain.exponentialRampToValueAtTime(0.001, t + 0.014);
+      noise.connect(noiseGain);
+      noiseGain.connect(ac.destination);
+      noise.start(t);
+      noise.stop(t + 0.015);
+    } catch (_) {}
+  }
+
+  function playDigitalConfirm() {
+    try {
+      const ac = getAC();
+      const t  = ac.currentTime;
+      const notes: [number, number, number][] = [[370, 0, 0.065], [740, 0.075, 0.105]];
+      for (const [freq, delay, dur] of notes) {
+        const osc  = ac.createOscillator();
+        const gain = ac.createGain();
+        osc.type = 'sine';
+        osc.frequency.value = freq;
+        gain.gain.setValueAtTime(0, t + delay);
+        gain.gain.linearRampToValueAtTime(0.22, t + delay + 0.008);
+        gain.gain.exponentialRampToValueAtTime(0.001, t + delay + dur);
+        osc.connect(gain);
+        gain.connect(ac.destination);
+        osc.start(t + delay);
+        osc.stop(t + delay + dur + 0.01);
+      }
+    } catch (_) {}
+  }
+
+  // Wire up sounds after DOM is fully ready
+  document.addEventListener('DOMContentLoaded', () => {
+    // Click → digital confirm on any button or anchor
+    document.addEventListener('click', (e) => {
+      if ((e.target as Element).closest('a, button')) playDigitalConfirm();
+    });
+
+    // Hover → soft bubble pop on cards and nav links
+    document.querySelectorAll<HTMLElement>('.rounded-2xl, nav a').forEach(el => {
+      el.addEventListener('mouseenter', () => playBubblePop());
+    });
+  });
+  // ── /Audio ─────────────────────────────────────────────────────────────
+
   function lerp(a: number, b: number, t: number) { return a + (b - a) * t; }
 
   function toRgba(hex: string, alpha: number): string {
