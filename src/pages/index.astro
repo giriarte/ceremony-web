@@ -24,6 +24,17 @@ const liveProducts = [
     videoId: 'Zm8O60NSD8I',
     accent: 'pink',
   },
+  {
+    name: 'Petbook',
+    slug: 'petbook',
+    tagline: 'Modern pet adoption, simplified',
+    description:
+      'A friendly platform connecting animals in need with loving homes. Browse, filter, and find your perfect companion — built mobile-first with real-time listings.',
+    icon: '🐾',
+    url: 'https://main.dnbxqyp160grq.amplifyapp.com/',
+    thumbnail: '/petbook/petbook0.png',
+    accent: 'blue',
+  },
 ];
 
 const products = [
@@ -36,25 +47,16 @@ const products = [
     icon: '📈',
     accent: 'pink',
   },
-  {
-    name: 'Petbook',
-    slug: 'petbook',
-    tagline: 'Modern pet adoption, simplified',
-    description:
-      'A friendly platform connecting animals in need with loving homes. Browse, filter, and find your perfect companion.',
-    icon: '🐾',
-    accent: 'blue',
-  },
 ];
 
 const stepIcons = [
-  // 0 — Discovery: magnifying glass over bar chart (blue)
+  // 0 — Discovery
   `<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" r="70" fill="rgba(59,130,246,.08)"/><rect x="36" y="48" width="60" height="76" rx="8" fill="#080f1f" stroke="rgba(59,130,246,.28)" stroke-width="1.5"/><rect x="48" y="63" width="36" height="2.5" rx="1.2" fill="rgba(96,165,250,.35)"/><rect x="48" y="70" width="24" height="2" rx="1" fill="rgba(96,165,250,.2)"/><rect x="48" y="99" width="10" height="16" rx="2" fill="rgba(59,130,246,.4)"/><rect x="63" y="90" width="10" height="25" rx="2" fill="rgba(59,130,246,.62)"/><rect x="78" y="81" width="10" height="34" rx="2" fill="#60a5fa" opacity=".82"/><circle cx="104" cy="57" r="24" fill="#060c1a" stroke="#60a5fa" stroke-width="2"/><circle cx="104" cy="57" r="15" fill="rgba(59,130,246,.07)" stroke="rgba(96,165,250,.22)" stroke-width="1"/><circle cx="97" cy="50" r="5" fill="rgba(255,255,255,.08)"/><line x1="121" y1="74" x2="133" y2="86" stroke="#60a5fa" stroke-width="3.5" stroke-linecap="round"/><circle cx="104" cy="57" r="30" stroke="rgba(96,165,250,.09)" stroke-width="7"/></svg>`,
-  // 1 — Solution Design: connected node network (blue-pink)
+  // 1 — Solution Design
   `<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" r="70" fill="rgba(99,102,241,.07)"/><circle cx="80" cy="80" r="22" stroke="rgba(96,165,250,.07)" stroke-width="1" stroke-dasharray="3 4"/><line x1="80" y1="44" x2="80" y2="67" stroke="rgba(96,165,250,.3)" stroke-width="1.5" stroke-dasharray="4 3"/><line x1="112" y1="54" x2="93" y2="71" stroke="rgba(244,114,182,.3)" stroke-width="1.5" stroke-dasharray="4 3"/><line x1="117" y1="109" x2="94" y2="89" stroke="rgba(236,72,153,.3)" stroke-width="1.5" stroke-dasharray="4 3"/><line x1="43" y1="107" x2="67" y2="89" stroke="rgba(129,140,248,.3)" stroke-width="1.5" stroke-dasharray="4 3"/><line x1="43" y1="53" x2="68" y2="71" stroke="rgba(96,165,250,.3)" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="80" cy="80" r="13" fill="#0a1220" stroke="#60a5fa" stroke-width="2"/><circle cx="80" cy="80" r="7" fill="rgba(59,130,246,.28)"/><circle cx="80" cy="80" r="3.5" fill="#60a5fa"/><circle cx="80" cy="36" r="9" fill="#0a1220" stroke="#93c5fd" stroke-width="1.5"/><circle cx="80" cy="36" r="4.5" fill="rgba(147,197,253,.38)"/><circle cx="119" cy="50" r="8" fill="#0a1220" stroke="#f472b6" stroke-width="1.5"/><circle cx="119" cy="50" r="4" fill="rgba(244,114,182,.38)"/><circle cx="123" cy="113" r="8" fill="#0a1220" stroke="#ec4899" stroke-width="1.5"/><circle cx="123" cy="113" r="4" fill="rgba(236,72,153,.33)"/><circle cx="37" cy="111" r="8" fill="#0a1220" stroke="#818cf8" stroke-width="1.5"/><circle cx="37" cy="111" r="4" fill="rgba(129,140,248,.38)"/><circle cx="37" cy="49" r="9" fill="#0a1220" stroke="#60a5fa" stroke-width="1.5"/><circle cx="37" cy="49" r="4.5" fill="rgba(59,130,246,.33)"/></svg>`,
-  // 2 — Build: isometric stacked layers (pink)
+  // 2 — Build
   `<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" r="70" fill="rgba(236,72,153,.07)"/><path d="M80 106 L114 88 L80 70 L46 88 Z" fill="#14082e" stroke="rgba(236,72,153,.22)" stroke-width="1"/><path d="M114 88 L114 106 L80 124 L80 106 Z" fill="#0e0521" stroke="rgba(236,72,153,.14)" stroke-width="1"/><path d="M46 88 L46 106 L80 124 L80 106 Z" fill="#120727" stroke="rgba(236,72,153,.14)" stroke-width="1"/><path d="M80 80 L108 65 L80 50 L52 65 Z" fill="#1a0a3a" stroke="rgba(244,114,182,.32)" stroke-width="1"/><path d="M108 65 L108 80 L80 95 L80 80 Z" fill="#120731" stroke="rgba(244,114,182,.18)" stroke-width="1"/><path d="M52 65 L52 80 L80 95 L80 80 Z" fill="#160935" stroke="rgba(244,114,182,.18)" stroke-width="1"/><path d="M80 55 L101 44 L80 33 L59 44 Z" fill="#210d48" stroke="#f472b6" stroke-width="1.5"/><path d="M101 44 L101 55 L80 66 L80 55 Z" fill="#18093e" stroke="rgba(244,114,182,.28)" stroke-width="1"/><path d="M59 44 L59 55 L80 66 L80 55 Z" fill="#1c0c44" stroke="rgba(244,114,182,.28)" stroke-width="1"/><circle cx="80" cy="38" r="5.5" fill="rgba(244,114,182,.45)"/><circle cx="80" cy="38" r="2.8" fill="#f472b6"/></svg>`,
-  // 3 — Launch: rocket with flames (pink) — uses sc3b gradient for rocket body
+  // 3 — Launch
   `<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sc3b" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fce7f3"/><stop offset="100%" stop-color="#ec4899"/></linearGradient></defs><circle cx="80" cy="80" r="70" fill="rgba(236,72,153,.08)"/><rect x="52" y="121" width="56" height="6" rx="3" fill="rgba(236,72,153,.18)" stroke="rgba(236,72,153,.28)" stroke-width="1"/><rect x="60" y="115" width="40" height="8" rx="2" fill="rgba(236,72,153,.1)" stroke="rgba(236,72,153,.18)" stroke-width="1"/><path d="M71 115 C73 126 77 132 80 134 C83 132 87 126 89 115" fill="rgba(251,146,60,.55)"/><path d="M74 115 C76 122 79 127 80 129 C81 127 84 122 86 115" fill="rgba(251,191,36,.75)"/><path d="M80 36 C70 50 66 72 66 93 L94 93 C94 72 90 50 80 36 Z" fill="url(#sc3b)"/><path d="M80 26 C75 31 72 38 70 45 L90 45 C88 38 85 31 80 26 Z" fill="#fdf2f8"/><circle cx="80" cy="70" r="9" fill="#07101f" stroke="#fce7f3" stroke-width="1.5"/><circle cx="80" cy="70" r="4.5" fill="rgba(252,231,243,.15)"/><circle cx="77" cy="67" r="2" fill="rgba(255,255,255,.2)"/><path d="M66 93 L55 114 L69 103 Z" fill="#be185d" opacity=".85"/><path d="M94 93 L105 114 L91 103 Z" fill="#be185d" opacity=".85"/><circle cx="44" cy="74" r="2.5" fill="rgba(244,114,182,.4)"/><circle cx="116" cy="70" r="2.5" fill="rgba(244,114,182,.4)"/><circle cx="36" cy="43" r="1.5" fill="rgba(255,255,255,.35)"/><circle cx="125" cy="37" r="2" fill="rgba(255,255,255,.28)"/></svg>`,
 ];
 
@@ -132,6 +134,72 @@ const processSteps = [
     icon: stepIcons[3],
   },
 ];
+
+const webDevIcons = [
+  // 0 — Portal Development
+  `<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" r="70" fill="rgba(16,185,129,.08)"/><rect x="28" y="44" width="104" height="72" rx="9" fill="#080f1f" stroke="rgba(16,185,129,.28)" stroke-width="1.5"/><rect x="28" y="44" width="104" height="19" rx="9" fill="rgba(16,185,129,.1)" stroke="rgba(16,185,129,.22)" stroke-width="1.5"/><circle cx="43" cy="54" r="3.5" fill="rgba(16,185,129,.55)"/><circle cx="54" cy="54" r="3.5" fill="rgba(16,185,129,.3)"/><circle cx="65" cy="54" r="3.5" fill="rgba(16,185,129,.18)"/><rect x="40" y="72" width="32" height="28" rx="4" fill="rgba(16,185,129,.1)" stroke="rgba(16,185,129,.22)" stroke-width="1"/><rect x="44" y="76" width="24" height="2.5" rx="1.2" fill="rgba(16,185,129,.45)"/><rect x="44" y="82" width="16" height="2" rx="1" fill="rgba(16,185,129,.25)"/><rect x="44" y="87" width="20" height="2" rx="1" fill="rgba(16,185,129,.18)"/><rect x="78" y="72" width="50" height="13" rx="4" fill="rgba(16,185,129,.08)" stroke="rgba(16,185,129,.18)" stroke-width="1"/><rect x="83" y="77" width="30" height="2" rx="1" fill="rgba(16,185,129,.3)"/><rect x="83" y="82" width="20" height="2" rx="1" fill="rgba(16,185,129,.18)"/><rect x="78" y="89" width="50" height="11" rx="4" fill="rgba(16,185,129,.08)" stroke="rgba(16,185,129,.18)" stroke-width="1"/><rect x="83" y="93" width="25" height="2" rx="1" fill="rgba(16,185,129,.25)"/></svg>`,
+  // 1 — E-Commerce Development
+  `<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" r="70" fill="rgba(16,185,129,.07)"/><path d="M52 72 L108 72 L101 116 L59 116 Z" fill="#080f1f" stroke="rgba(16,185,129,.28)" stroke-width="1.5"/><path d="M64 72 C64 57 96 57 96 72" stroke="#34d399" stroke-width="2" fill="none" stroke-linecap="round" opacity=".7"/><rect x="67" y="86" width="26" height="17" rx="4" fill="rgba(16,185,129,.12)" stroke="rgba(16,185,129,.3)" stroke-width="1"/><circle cx="76" cy="91" r="2.5" fill="rgba(16,185,129,.55)"/><rect x="71" y="96" width="18" height="2" rx="1" fill="rgba(16,185,129,.4)"/><circle cx="113" cy="55" r="5" fill="rgba(16,185,129,.25)"/><circle cx="113" cy="55" r="2.5" fill="#10b981" opacity=".6"/><circle cx="43" cy="62" r="3" fill="rgba(16,185,129,.2)"/><circle cx="43" cy="62" r="1.5" fill="rgba(52,211,153,.4)"/></svg>`,
+  // 2 — CRM Development
+  `<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" r="70" fill="rgba(16,185,129,.07)"/><circle cx="80" cy="60" r="14" fill="#080f1f" stroke="rgba(16,185,129,.35)" stroke-width="1.5"/><circle cx="80" cy="57" r="6" fill="rgba(16,185,129,.28)"/><path d="M66 76 C66 70 94 70 94 76" stroke="rgba(16,185,129,.28)" stroke-width="1.5" fill="none" stroke-linecap="round"/><line x1="80" y1="74" x2="46" y2="100" stroke="rgba(16,185,129,.22)" stroke-width="1.5" stroke-dasharray="4 3"/><line x1="80" y1="74" x2="80" y2="106" stroke="rgba(16,185,129,.22)" stroke-width="1.5" stroke-dasharray="4 3"/><line x1="80" y1="74" x2="114" y2="100" stroke="rgba(16,185,129,.22)" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="46" cy="108" r="10" fill="#080f1f" stroke="rgba(16,185,129,.28)" stroke-width="1.5"/><circle cx="46" cy="106" r="4" fill="rgba(16,185,129,.22)"/><circle cx="80" cy="116" r="10" fill="#080f1f" stroke="rgba(16,185,129,.32)" stroke-width="1.5"/><circle cx="80" cy="114" r="4" fill="rgba(16,185,129,.28)"/><circle cx="114" cy="108" r="10" fill="#080f1f" stroke="rgba(16,185,129,.28)" stroke-width="1.5"/><circle cx="114" cy="106" r="4" fill="rgba(16,185,129,.22)"/></svg>`,
+];
+
+const webDevItems = [
+  {
+    number: '1',
+    category: 'Portal Development',
+    accent: 'green',
+    title: 'Custom web portals',
+    tagline: 'Tailored portals that centralize data, unify workflows, and give your team or clients a single, purpose-built interface.',
+    description: 'We build web portals from scratch — no off-the-shelf templates, no compromises. Whether it\'s an internal operations dashboard, a client-facing reporting portal, or a partner management hub, we design the architecture around how your users actually work. The result is a fast, secure, and maintainable system that grows with your business.',
+    bullets: [
+      'Custom UX/UI design tailored to your users',
+      'Role-based access and secure authentication',
+      'Dashboards, reporting, and data visualization',
+      'Third-party API and system integrations',
+      'Scalable architecture built to grow',
+    ],
+    duration: null,
+    outcome: 'A production-ready web portal your team adopts from day one.',
+    icon: webDevIcons[0],
+  },
+  {
+    number: '2',
+    category: 'E-Commerce Development',
+    accent: 'green',
+    title: 'E-Commerce platforms',
+    tagline: 'Complete online stores — from product catalog and cart to checkout and order management — built to convert and scale.',
+    description: 'We build e-commerce experiences that go beyond installing a plugin. Whether you need a custom storefront, a multi-vendor marketplace, or a subscription platform, we architect the full stack: product management, payment processing, inventory, shipping integrations, and analytics — built to handle real traffic and real orders.',
+    bullets: [
+      'Custom storefront design and UX flow',
+      'Payment gateway integration (Stripe, PayPal, and more)',
+      'Product catalog, inventory, and order management',
+      'Shipping, tax, and fulfillment integrations',
+      'Mobile-first, performance-optimized builds',
+    ],
+    duration: null,
+    outcome: 'A live online store ready to process orders and grow your revenue.',
+    icon: webDevIcons[1],
+  },
+  {
+    number: '3',
+    category: 'CRM Development',
+    accent: 'green',
+    title: 'Custom CRM systems',
+    tagline: 'Purpose-built CRM systems that match exactly how your team manages relationships — not the other way around.',
+    description: 'Off-the-shelf CRMs are built for everyone, which means they fit no one perfectly. We build custom CRM systems tailored to your sales process, customer lifecycle, and reporting needs. Full contact management, pipeline tracking, activity logging, and integrations with your existing tools — everything your team needs and nothing they don\'t.',
+    bullets: [
+      'Contact, account, and deal management',
+      'Custom pipeline stages and workflow automation',
+      'Activity tracking: calls, emails, meetings, and notes',
+      'Reports, dashboards, and performance metrics',
+      'Integration with email, calendar, and third-party tools',
+    ],
+    duration: null,
+    outcome: 'A CRM your team actually uses — built around your process, not a vendor\'s template.',
+    icon: webDevIcons[2],
+  },
+];
 ---
 
 <Layout>
@@ -164,7 +232,7 @@ const processSteps = [
         class="inline-flex items-center gap-2 bg-blue-brand/10 border border-blue-brand/20 rounded-full px-4 py-1.5 text-sm text-blue-light mb-8"
       >
         <span class="w-2 h-2 bg-blue-light rounded-full animate-pulse"></span>
-        Two live · Two in development
+        4 products launched — next one can be yours
       </div>
 
       <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
@@ -193,14 +261,34 @@ const processSteps = [
   <!-- Engagement Process -->
   <section id="process" class="py-28 px-6 border-t border-white/5">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
+      <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">How we work</h2>
         <p class="text-slate-400 max-w-xl mx-auto">
-          A focused four-step process that takes you from idea to a live solution in under six weeks.
+          Two service tracks, one focused team. Select a category to explore our process and what we deliver.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Category tabs -->
+      <div class="flex justify-center mb-12">
+        <div class="inline-flex items-center gap-1 bg-white/5 border border-white/10 rounded-full p-1">
+          <button
+            id="tab-ai"
+            class="px-5 py-2 rounded-full text-sm font-medium transition-all duration-200"
+            style="background:linear-gradient(135deg,#3b82f6,#2563eb);color:white;box-shadow:0 2px 12px rgba(59,130,246,0.3);"
+          >
+            AI &amp; Software
+          </button>
+          <button
+            id="tab-web"
+            class="px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 text-slate-400 hover:text-white"
+          >
+            Web Development
+          </button>
+        </div>
+      </div>
+
+      <!-- AI & Software grid -->
+      <div id="grid-ai" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {processSteps.map((step, i) => {
           const isBlue = step.accent === 'blue';
           const badgeGrad =
@@ -250,6 +338,40 @@ const processSteps = [
             </div>
           );
         })}
+      </div>
+
+      <!-- Web Development grid -->
+      <div id="grid-web" class="hidden grid md:grid-cols-3 gap-6">
+        {webDevItems.map((item, i) => (
+          <div
+            class="relative rounded-2xl bg-surface border border-emerald-500/20 p-8 flex flex-col gap-4 cursor-pointer select-none transition-all duration-200 hover:scale-[1.02] hover:border-emerald-500/60"
+            data-webdev={i}
+            role="button"
+            tabindex="0"
+          >
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex items-center gap-3">
+                <span class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg" style="background:linear-gradient(135deg,#10b981,#059669);box-shadow:0 4px 14px rgba(16,185,129,0.3);">
+                  {item.number}
+                </span>
+                <span class="text-xs font-medium uppercase tracking-wider text-emerald-400">
+                  {item.category}
+                </span>
+              </div>
+              <div class="w-16 h-16 flex-shrink-0 opacity-70" aria-hidden="true" set:html={item.icon} />
+            </div>
+            <div class="flex-1">
+              <h3 class="text-lg font-bold mb-3">{item.title}</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">{item.tagline}</p>
+            </div>
+            <div class="flex items-center gap-1.5 text-xs font-medium opacity-35 text-emerald-400">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+              </svg>
+              <span>Click to expand</span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -310,17 +432,41 @@ const processSteps = [
                     </a>
                   </div>
                 </div>
-                <!-- Video -->
+                <!-- Video / Screenshots -->
                 <div class="lg:w-3/5 w-full">
-                  <div class="w-full rounded-xl overflow-hidden bg-black/30 aspect-video">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${p.videoId}`}
-                      class="w-full h-full"
-                      allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-                      allowfullscreen
-                      frameborder="0"
-                    />
-                  </div>
+                  {p.videoId ? (
+                    <div class="w-full rounded-xl overflow-hidden bg-black/30 aspect-video">
+                      <iframe
+                        src={`https://www.youtube.com/embed/${p.videoId}`}
+                        class="w-full h-full"
+                        allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                        allowfullscreen
+                        frameborder="0"
+                      />
+                    </div>
+                  ) : (
+                    <div
+                      class="w-full rounded-xl overflow-hidden bg-black/30 aspect-video cursor-pointer group relative"
+                      id={`pb-thumb-${p.slug}`}
+                      role="button"
+                      tabindex="0"
+                      aria-label={`View more...`}
+                    >
+                      <img
+                        src={p.thumbnail}
+                        alt={`${p.name} preview`}
+                        class="w-full h-full object-cover object-top"
+                      />
+                      <div class="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/50 transition-colors duration-200">
+                        <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2.5 text-sm font-medium text-white">
+                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                          </svg>
+                          View more...
+                        </span>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -329,7 +475,7 @@ const processSteps = [
       </div>
 
       <!-- Coming soon products -->
-      <div class="grid md:grid-cols-2 gap-6">
+      <div class={`grid gap-6 ${products.length === 1 ? 'max-w-lg mx-auto' : 'md:grid-cols-2'}`}>
         {
           products.map((p) => (
             <div
@@ -491,6 +637,130 @@ const processSteps = [
     © {new Date().getFullYear()} Ceremony Labs. All rights reserved.
   </footer>
 
+  <!-- Petbook detail modal -->
+  <div
+    id="pb-backdrop"
+    aria-hidden="true"
+    style="position:fixed;inset:0;z-index:300;background:rgba(4,7,20,0.97);opacity:0;pointer-events:none;transition:opacity 0.35s ease;"
+  >
+    <div id="pb-scroll" style="position:absolute;inset:0;overflow-y:auto;padding:2.5rem 1.5rem 6rem;">
+      <div
+        id="pb-inner"
+        class="max-w-4xl mx-auto"
+        style="opacity:0;transform:translateY(24px);transition:opacity 0.32s ease,transform 0.32s ease;"
+      >
+        <!-- Header -->
+        <div class="flex items-start justify-between gap-4 mb-10">
+          <div class="flex items-center gap-4">
+            <span style="font-size:2.5rem;">🐾</span>
+            <div>
+              <h2 class="text-3xl font-bold text-white">Petbook</h2>
+              <div class="flex flex-wrap items-center gap-3 mt-1.5">
+                <span class="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-0.5 rounded-full border bg-green-500/10 text-green-400 border-green-500/20">
+                  <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
+                  Live
+                </span>
+                <a
+                  href="https://main.dnbxqyp160grq.amplifyapp.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-sm text-blue-light hover:text-white transition-colors"
+                >
+                  Visit Petbook →
+                </a>
+              </div>
+            </div>
+          </div>
+          <button
+            id="pb-close"
+            aria-label="Close"
+            style="flex-shrink:0;width:2.75rem;height:2.75rem;border-radius:50%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:white;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;"
+          >
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Intro -->
+        <p class="text-slate-400 text-base leading-relaxed mb-12 max-w-2xl">
+          Petbook is our take on what a modern pet adoption platform should feel like — warm, clear, and genuinely helpful to both shelters and future pet parents. Built mobile-first with real-time listings, Petbook bridges the gap between animals in need and the families ready to welcome them home.
+        </p>
+
+        <!-- Section 1: screenshot left, text right -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-14">
+          <div class="rounded-2xl overflow-hidden" style="border:1px solid rgba(96,165,250,0.18);box-shadow:0 0 50px rgba(59,130,246,0.1);">
+            <img src="/petbook/petbook0.png" alt="Petbook browse screen" class="w-full h-auto block" />
+          </div>
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-widest text-blue-light mb-3">Browse</div>
+            <h3 class="text-xl font-bold text-white mb-4 leading-snug">Find your next companion</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              The home screen is designed to put pets first. Every available animal is showcased with a clear photo, name, age, breed, and shelter location — all in a responsive layout that works beautifully on any device. Listings update in real time as new animals arrive at partner shelters, so you never miss a new arrival.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 2: text left, screenshot right -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-14">
+          <div class="md:order-1 order-2">
+            <div class="text-xs font-semibold uppercase tracking-widest text-blue-light mb-3">Pet Profile</div>
+            <h3 class="text-xl font-bold text-white mb-4 leading-snug">Every pet has a story</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Each animal has a dedicated profile page that goes far beyond a name and photo. Petbook surfaces the full picture: the pet's background and temperament, care requirements, medical status, and vaccination records. Because the better you know them before you meet, the stronger your bond becomes from day one.
+            </p>
+          </div>
+          <div class="md:order-2 order-1 rounded-2xl overflow-hidden" style="border:1px solid rgba(96,165,250,0.18);box-shadow:0 0 50px rgba(59,130,246,0.1);">
+            <img src="/petbook/petbook1.png" alt="Petbook pet profile" class="w-full h-auto block" />
+          </div>
+        </div>
+
+        <!-- Section 3: screenshot left, text right -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-14">
+          <div class="rounded-2xl overflow-hidden" style="border:1px solid rgba(96,165,250,0.18);box-shadow:0 0 50px rgba(59,130,246,0.1);">
+            <img src="/petbook/petbook2.png" alt="Petbook search and filter" class="w-full h-auto block" />
+          </div>
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-widest text-blue-light mb-3">Search</div>
+            <h3 class="text-xl font-bold text-white mb-4 leading-snug">Smart search that understands what you need</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Petbook's filtering system was built with real adopters in mind. Narrow your search by species, breed, age, size, gender, and distance — or combine filters to find a specific match. Whether you're looking for a young border collie within 10 miles or a calm senior cat, the results update instantly.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 4: text left, screenshot right -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-14">
+          <div class="md:order-1 order-2">
+            <div class="text-xs font-semibold uppercase tracking-widest text-pink-light mb-3">Adoption</div>
+            <h3 class="text-xl font-bold text-white mb-4 leading-snug">From interest to introduction</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Once you find a pet that feels right, Petbook makes it easy to take the next step. Submit an adoption inquiry directly through the platform, and the shelter or foster parent receives your message immediately. The whole process is designed to feel encouraging, not bureaucratic — because the goal is always to get more animals home.
+            </p>
+          </div>
+          <div class="md:order-2 order-1 rounded-2xl overflow-hidden" style="border:1px solid rgba(236,72,153,0.18);box-shadow:0 0 50px rgba(236,72,153,0.08);">
+            <img src="/petbook/petbook3.png" alt="Petbook adoption inquiry" class="w-full h-auto block" />
+          </div>
+        </div>
+
+        <!-- Footer CTA -->
+        <div class="text-center pt-8 border-t border-white/5">
+          <a
+            href="https://main.dnbxqyp160grq.amplifyapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-brand to-blue-600 text-white font-semibold px-7 py-3 rounded-full transition-opacity hover:opacity-90 shadow-lg shadow-blue-brand/25 text-sm"
+          >
+            Visit Petbook
+            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Process step zoom overlay -->
   <div
     id="po-backdrop"
@@ -594,6 +864,49 @@ const processSteps = [
   });
 </script>
 
+<script>
+  const pbBackdrop = document.getElementById('pb-backdrop') as HTMLElement;
+  const pbScroll   = document.getElementById('pb-scroll')   as HTMLElement;
+  const pbInner    = document.getElementById('pb-inner')    as HTMLElement;
+  const pbClose    = document.getElementById('pb-close')    as HTMLElement;
+  const pbThumb    = document.getElementById('pb-thumb-petbook');
+
+  function openPetbook() {
+    pbBackdrop.removeAttribute('aria-hidden');
+    pbBackdrop.style.opacity = '1';
+    pbBackdrop.style.pointerEvents = 'auto';
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(() => {
+      pbInner.style.opacity = '1';
+      pbInner.style.transform = 'translateY(0)';
+    });
+  }
+
+  function closePetbook() {
+    pbInner.style.opacity = '0';
+    pbInner.style.transform = 'translateY(24px)';
+    setTimeout(() => {
+      pbBackdrop.setAttribute('aria-hidden', 'true');
+      pbBackdrop.style.opacity = '0';
+      pbBackdrop.style.pointerEvents = 'none';
+      document.body.style.overflow = '';
+      pbScroll.scrollTop = 0;
+    }, 320);
+  }
+
+  pbThumb?.addEventListener('click', openPetbook);
+  pbThumb?.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openPetbook(); }});
+  pbClose?.addEventListener('click', closePetbook);
+
+  pbScroll?.addEventListener('click', (e) => {
+    if (e.target === pbScroll) closePetbook();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && pbBackdrop.style.opacity === '1') closePetbook();
+  });
+</script>
+
 <style is:global>
   @keyframes po-float {
     0%, 100% { transform: translateY(0px);  }
@@ -602,7 +915,7 @@ const processSteps = [
   .po-illus { animation: po-float 4.5s ease-in-out infinite; }
 </style>
 
-<script define:vars={{ processSteps }}>
+<script define:vars={{ processSteps, webDevItems }}>
   const backdrop = document.getElementById('po-backdrop');
   const card     = document.getElementById('po-card');
   const inner    = document.getElementById('po-inner');
@@ -615,10 +928,15 @@ const processSteps = [
   let contentTimer    = null;
   let currentStepIdx  = 0;
   let isTransitioning = false;
+  let activeCategory  = 'ai';
 
-  // ── Illustrations (one SVG per step) ───────────────────────────────────
+  function getActiveItems() {
+    return activeCategory === 'ai' ? processSteps : webDevItems;
+  }
+
+  // ── Illustrations ──────────────────────────────────────────────────────
   const ILLUSTRATIONS = [
-    // 0 — Discovery: magnifying glass over a mini bar chart
+    // 0 — Discovery
     `<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
       <defs><radialGradient id="pg0" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#3b82f6" stop-opacity=".15"/><stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/></radialGradient></defs>
       <circle cx="80" cy="80" r="70" fill="url(#pg0)"/>
@@ -635,7 +953,7 @@ const processSteps = [
       <circle cx="104" cy="57" r="30" stroke="rgba(96,165,250,.09)" stroke-width="7"/>
     </svg>`,
 
-    // 1 — Solution Design: neural network of nodes
+    // 1 — Solution Design
     `<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
       <defs><radialGradient id="pg1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#6366f1" stop-opacity=".1"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient></defs>
       <circle cx="80" cy="80" r="70" fill="url(#pg1)"/>
@@ -655,7 +973,7 @@ const processSteps = [
       <circle cx="37" cy="49" r="9" fill="#0a1220" stroke="#60a5fa" stroke-width="1.5"/><circle cx="37" cy="49" r="4.5" fill="rgba(59,130,246,.33)"/>
     </svg>`,
 
-    // 2 — Build: three stacked isometric layers
+    // 2 — Build
     `<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
       <defs><radialGradient id="pg2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity=".13"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient></defs>
       <circle cx="80" cy="80" r="70" fill="url(#pg2)"/>
@@ -678,7 +996,7 @@ const processSteps = [
       <rect x="119" y="78" width="18" height="3" rx="1.5" fill="#ec4899" opacity=".4"/>
     </svg>`,
 
-    // 3 — Launch: rocket with flames and star particles
+    // 3 — Launch
     `<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
       <defs>
         <radialGradient id="pg3a" cx="50%" cy="65%" r="55%"><stop offset="0%" stop-color="#ec4899" stop-opacity=".15"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient>
@@ -707,17 +1025,79 @@ const processSteps = [
       <circle cx="131" cy="56" r="1.2" fill="rgba(255,255,255,.28)"/>
       <circle cx="29" cy="59" r="1.8" fill="rgba(255,255,255,.22)"/>
     </svg>`,
+
+    // 4 — Portal Development
+    `<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+      <defs><radialGradient id="pg4" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#10b981" stop-opacity=".13"/><stop offset="100%" stop-color="#10b981" stop-opacity="0"/></radialGradient></defs>
+      <circle cx="80" cy="80" r="70" fill="url(#pg4)"/>
+      <rect x="28" y="44" width="104" height="72" rx="9" fill="#080f1f" stroke="rgba(16,185,129,.28)" stroke-width="1.5"/>
+      <rect x="28" y="44" width="104" height="19" rx="9" fill="rgba(16,185,129,.1)" stroke="rgba(16,185,129,.22)" stroke-width="1.5"/>
+      <circle cx="43" cy="54" r="3.5" fill="rgba(16,185,129,.55)"/>
+      <circle cx="54" cy="54" r="3.5" fill="rgba(16,185,129,.3)"/>
+      <circle cx="65" cy="54" r="3.5" fill="rgba(16,185,129,.18)"/>
+      <rect x="40" y="72" width="32" height="28" rx="4" fill="rgba(16,185,129,.1)" stroke="rgba(16,185,129,.22)" stroke-width="1"/>
+      <rect x="44" y="76" width="24" height="2.5" rx="1.2" fill="rgba(16,185,129,.45)"/>
+      <rect x="44" y="82" width="16" height="2" rx="1" fill="rgba(16,185,129,.25)"/>
+      <rect x="44" y="87" width="20" height="2" rx="1" fill="rgba(16,185,129,.18)"/>
+      <rect x="78" y="72" width="50" height="13" rx="4" fill="rgba(16,185,129,.08)" stroke="rgba(16,185,129,.18)" stroke-width="1"/>
+      <rect x="83" y="77" width="30" height="2" rx="1" fill="rgba(16,185,129,.3)"/>
+      <rect x="83" y="82" width="20" height="2" rx="1" fill="rgba(16,185,129,.18)"/>
+      <rect x="78" y="89" width="50" height="11" rx="4" fill="rgba(16,185,129,.08)" stroke="rgba(16,185,129,.18)" stroke-width="1"/>
+      <rect x="83" y="93" width="25" height="2" rx="1" fill="rgba(16,185,129,.25)"/>
+    </svg>`,
+
+    // 5 — E-Commerce Development
+    `<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+      <defs><radialGradient id="pg5" cx="50%" cy="60%" r="55%"><stop offset="0%" stop-color="#10b981" stop-opacity=".13"/><stop offset="100%" stop-color="#10b981" stop-opacity="0"/></radialGradient></defs>
+      <circle cx="80" cy="80" r="70" fill="url(#pg5)"/>
+      <path d="M52 72 L108 72 L101 116 L59 116 Z" fill="#080f1f" stroke="rgba(16,185,129,.28)" stroke-width="1.5"/>
+      <path d="M64 72 C64 57 96 57 96 72" stroke="#34d399" stroke-width="2" fill="none" stroke-linecap="round" opacity=".7"/>
+      <rect x="67" y="86" width="26" height="17" rx="4" fill="rgba(16,185,129,.12)" stroke="rgba(16,185,129,.3)" stroke-width="1"/>
+      <circle cx="76" cy="91" r="2.5" fill="rgba(16,185,129,.55)"/>
+      <rect x="71" y="96" width="18" height="2" rx="1" fill="rgba(16,185,129,.4)"/>
+      <circle cx="113" cy="55" r="5" fill="rgba(16,185,129,.25)"/>
+      <circle cx="113" cy="55" r="2.5" fill="#10b981" opacity=".6"/>
+      <circle cx="43" cy="62" r="3" fill="rgba(16,185,129,.2)"/>
+      <circle cx="43" cy="62" r="1.5" fill="rgba(52,211,153,.4)"/>
+      <circle cx="118" cy="70" r="2" fill="rgba(52,211,153,.3)"/>
+      <circle cx="38" cy="76" r="1.5" fill="rgba(52,211,153,.25)"/>
+    </svg>`,
+
+    // 6 — CRM Development
+    `<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+      <defs><radialGradient id="pg6" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#10b981" stop-opacity=".12"/><stop offset="100%" stop-color="#10b981" stop-opacity="0"/></radialGradient></defs>
+      <circle cx="80" cy="80" r="70" fill="url(#pg6)"/>
+      <circle cx="80" cy="60" r="14" fill="#080f1f" stroke="rgba(16,185,129,.35)" stroke-width="1.5"/>
+      <circle cx="80" cy="57" r="6" fill="rgba(16,185,129,.28)"/>
+      <path d="M66 76 C66 70 94 70 94 76" stroke="rgba(16,185,129,.28)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <line x1="80" y1="74" x2="46" y2="100" stroke="rgba(16,185,129,.22)" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <line x1="80" y1="74" x2="80" y2="106" stroke="rgba(16,185,129,.22)" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <line x1="80" y1="74" x2="114" y2="100" stroke="rgba(16,185,129,.22)" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <circle cx="46" cy="108" r="10" fill="#080f1f" stroke="rgba(16,185,129,.28)" stroke-width="1.5"/>
+      <circle cx="46" cy="106" r="4" fill="rgba(16,185,129,.22)"/>
+      <circle cx="80" cy="116" r="10" fill="#080f1f" stroke="rgba(16,185,129,.32)" stroke-width="1.5"/>
+      <circle cx="80" cy="114" r="4" fill="rgba(16,185,129,.28)"/>
+      <circle cx="114" cy="108" r="10" fill="#080f1f" stroke="rgba(16,185,129,.28)" stroke-width="1.5"/>
+      <circle cx="114" cy="106" r="4" fill="rgba(16,185,129,.22)"/>
+    </svg>`,
   ];
 
   // ── Content builder ────────────────────────────────────────────────────
   function buildContent(step, idx) {
-    const isBlue      = step.accent === 'blue';
-    const accentColor = isBlue ? '#60a5fa' : '#f472b6';
-    const gradFrom    = isBlue ? '#3b82f6' : '#ec4899';
-    const gradTo      = isBlue ? '#2563eb' : '#db2777';
-    const badgeBg     = isBlue ? 'rgba(59,130,246,0.12)' : 'rgba(236,72,153,0.12)';
-    const badgeBorder = isBlue ? 'rgba(59,130,246,0.3)'  : 'rgba(236,72,153,0.3)';
-    const dotColor    = isBlue ? '#3b82f6' : '#ec4899';
+    const isBlue  = step.accent === 'blue';
+    const isGreen = step.accent === 'green';
+    const accentColor = isBlue ? '#60a5fa' : isGreen ? '#34d399' : '#f472b6';
+    const gradFrom    = isBlue ? '#3b82f6' : isGreen ? '#10b981' : '#ec4899';
+    const gradTo      = isBlue ? '#2563eb' : isGreen ? '#059669' : '#db2777';
+    const badgeBg     = isBlue ? 'rgba(59,130,246,0.12)'  : isGreen ? 'rgba(16,185,129,0.12)'  : 'rgba(236,72,153,0.12)';
+    const badgeBorder = isBlue ? 'rgba(59,130,246,0.3)'   : isGreen ? 'rgba(16,185,129,0.3)'   : 'rgba(236,72,153,0.3)';
+    const dotColor    = isBlue ? '#3b82f6' : isGreen ? '#10b981' : '#ec4899';
+
+    const items      = getActiveItems();
+    const total      = items.length;
+    const stepLabel  = isGreen ? `Service ${step.number} of ${total}` : `Step ${step.number} of ${total}`;
+    const illusIdx   = activeCategory === 'ai' ? idx : idx + 4;
+    const illus      = ILLUSTRATIONS[illusIdx] || '';
 
     const bulletsHtml = step.bullets.map(b =>
       `<li style="display:flex;align-items:flex-start;gap:0.875rem;">
@@ -733,19 +1113,16 @@ const processSteps = [
          </div>`
       : '';
 
-    const illus = ILLUSTRATIONS[idx] || '';
-
     return `
       <div style="position:relative;display:flex;flex-direction:column;min-height:100%;max-width:780px;margin:0 auto;padding:4rem 3.5rem 5rem;box-sizing:border-box;">
         <div aria-hidden="true" style="position:absolute;right:-0.5rem;top:50%;transform:translateY(-50%);font-size:min(38vw,28rem);font-weight:900;color:white;opacity:0.022;line-height:1;pointer-events:none;user-select:none;letter-spacing:-0.05em;">0${step.number}</div>
 
-        <!-- Header row: badge+label on left, illustration on right -->
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem;position:relative;">
           <div style="display:flex;align-items:center;gap:0.875rem;padding-top:0.2rem;">
             <span style="flex-shrink:0;width:3rem;height:3rem;border-radius:50%;background:linear-gradient(135deg,${gradFrom},${gradTo});display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:1.125rem;box-shadow:0 4px 20px ${gradFrom}40;">${step.number}</span>
             <div>
               <div style="font-size:0.65rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:${accentColor};">${step.category}</div>
-              <div style="font-size:0.7rem;color:#475569;margin-top:2px;">Step ${step.number} of 4</div>
+              <div style="font-size:0.7rem;color:#475569;margin-top:2px;">${stepLabel}</div>
             </div>
           </div>
           <div class="po-illus" aria-hidden="true" style="flex-shrink:0;width:clamp(110px,22%,145px);aspect-ratio:1;">${illus}</div>
@@ -766,23 +1143,23 @@ const processSteps = [
 
   // ── Nav state (arrows + dots) ───────────────────────────────────────────
   function updateNav() {
-    const step    = processSteps[currentStepIdx];
+    const items   = getActiveItems();
+    const step    = items[currentStepIdx];
     const isBlue  = step.accent === 'blue';
-    const accent  = isBlue ? '#60a5fa' : '#f472b6';
-    const glowClr = isBlue ? 'rgba(59,130,246,0.18)' : 'rgba(236,72,153,0.18)';
-    const last    = processSteps.length - 1;
+    const isGreen = step.accent === 'green';
+    const accent  = isBlue ? '#60a5fa' : isGreen ? '#34d399' : '#f472b6';
+    const glowClr = isBlue ? 'rgba(59,130,246,0.18)' : isGreen ? 'rgba(16,185,129,0.18)' : 'rgba(236,72,153,0.18)';
+    const last    = items.length - 1;
 
     prevBtn.style.opacity       = currentStepIdx === 0    ? '0'    : '1';
     prevBtn.style.pointerEvents = currentStepIdx === 0    ? 'none' : 'auto';
     nextBtn.style.opacity       = currentStepIdx === last ? '0'    : '1';
     nextBtn.style.pointerEvents = currentStepIdx === last ? 'none' : 'auto';
 
-    // Store accent on buttons for hover handler
     prevBtn.dataset.accent = nextBtn.dataset.accent = accent;
     prevBtn.dataset.glow   = nextBtn.dataset.glow   = glowClr;
 
-    // Step dots
-    dotsEl.innerHTML = processSteps.map((_, i) => {
+    dotsEl.innerHTML = items.map((_, i) => {
       const active = i === currentStepIdx;
       return `<span style="display:block;border-radius:9999px;transition:all 0.3s ease;width:${active ? '1.5rem' : '0.5rem'};height:0.5rem;background:${active ? accent : 'rgba(255,255,255,0.18)'};" aria-hidden="true"></span>`;
     }).join('');
@@ -806,10 +1183,13 @@ const processSteps = [
 
   // ── Step transition (slide) ─────────────────────────────────────────────
   function applyAccent(step) {
-    const isBlue = step.accent === 'blue';
-    card.style.borderLeft = `3px solid ${isBlue ? 'rgba(59,130,246,0.25)' : 'rgba(236,72,153,0.25)'}`;
+    const isBlue  = step.accent === 'blue';
+    const isGreen = step.accent === 'green';
+    card.style.borderLeft = `3px solid ${isBlue ? 'rgba(59,130,246,0.25)' : isGreen ? 'rgba(16,185,129,0.25)' : 'rgba(236,72,153,0.25)'}`;
     card.style.background = isBlue
       ? 'linear-gradient(160deg,#0d1630 70%,rgba(59,130,246,0.04) 100%)'
+      : isGreen
+      ? 'linear-gradient(160deg,#0d1630 70%,rgba(16,185,129,0.04) 100%)'
       : 'linear-gradient(160deg,#0d1630 70%,rgba(236,72,153,0.04) 100%)';
   }
 
@@ -827,7 +1207,7 @@ const processSteps = [
     const next = document.createElement('div');
     next.className = 'po-content';
     next.style.cssText = `position:absolute;inset:0;overflow-y:auto;transform:translateX(${inX});opacity:0;`;
-    next.innerHTML = buildContent(processSteps[newIdx], newIdx);
+    next.innerHTML = buildContent(getActiveItems()[newIdx], newIdx);
     inner.appendChild(next);
 
     if (current) {
@@ -845,7 +1225,7 @@ const processSteps = [
     });
 
     currentStepIdx = newIdx;
-    applyAccent(processSteps[newIdx]);
+    applyAccent(getActiveItems()[newIdx]);
     updateNav();
 
     setTimeout(() => {
@@ -856,13 +1236,12 @@ const processSteps = [
 
   // ── Open / close ────────────────────────────────────────────────────────
   function openStep(idx, cardEl) {
-    const step = processSteps[idx];
+    const step = getActiveItems()[idx];
     if (!step) return;
 
     currentStepIdx = idx;
     storedRect     = cardEl.getBoundingClientRect();
 
-    // Build first content slide
     const wrapper = document.createElement('div');
     wrapper.className = 'po-content';
     wrapper.style.cssText = 'position:absolute;inset:0;overflow-y:auto;';
@@ -925,23 +1304,76 @@ const processSteps = [
     }, 140);
   }
 
+  // ── Tab switching ───────────────────────────────────────────────────────
+  const tabAi  = document.getElementById('tab-ai');
+  const tabWeb = document.getElementById('tab-web');
+  const gridAi = document.getElementById('grid-ai');
+  const gridWeb = document.getElementById('grid-web');
+
+  function switchTab(cat) {
+    activeCategory = cat;
+    if (cat === 'ai') {
+      tabAi.style.background  = 'linear-gradient(135deg,#3b82f6,#2563eb)';
+      tabAi.style.color       = 'white';
+      tabAi.style.boxShadow   = '0 2px 12px rgba(59,130,246,0.3)';
+      tabWeb.style.background = '';
+      tabWeb.style.color      = '#94a3b8';
+      tabWeb.style.boxShadow  = '';
+      gridAi.classList.remove('hidden');
+      gridWeb.classList.add('hidden');
+    } else {
+      tabWeb.style.background = 'linear-gradient(135deg,#10b981,#059669)';
+      tabWeb.style.color      = 'white';
+      tabWeb.style.boxShadow  = '0 2px 12px rgba(16,185,129,0.3)';
+      tabAi.style.background  = '';
+      tabAi.style.color       = '#94a3b8';
+      tabAi.style.boxShadow   = '';
+      gridWeb.classList.remove('hidden');
+      gridAi.classList.add('hidden');
+    }
+  }
+
+  tabAi.addEventListener('click',  () => switchTab('ai'));
+  tabWeb.addEventListener('click', () => switchTab('webdev'));
+
   // ── Event listeners ─────────────────────────────────────────────────────
   document.querySelectorAll('[data-step]').forEach(el => {
-    el.addEventListener('click', () => openStep(parseInt(el.dataset.step, 10), el));
+    el.addEventListener('click', () => {
+      activeCategory = 'ai';
+      openStep(parseInt(el.dataset.step, 10), el);
+    });
     el.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openStep(parseInt(el.dataset.step, 10), el); }
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        activeCategory = 'ai';
+        openStep(parseInt(el.dataset.step, 10), el);
+      }
+    });
+  });
+
+  document.querySelectorAll('[data-webdev]').forEach(el => {
+    el.addEventListener('click', () => {
+      activeCategory = 'webdev';
+      openStep(parseInt(el.dataset.webdev, 10), el);
+    });
+    el.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        activeCategory = 'webdev';
+        openStep(parseInt(el.dataset.webdev, 10), el);
+      }
     });
   });
 
   prevBtn.addEventListener('click', () => { if (currentStepIdx > 0) transitionToStep(currentStepIdx - 1, 'prev'); });
-  nextBtn.addEventListener('click', () => { if (currentStepIdx < processSteps.length - 1) transitionToStep(currentStepIdx + 1, 'next'); });
+  nextBtn.addEventListener('click', () => { if (currentStepIdx < getActiveItems().length - 1) transitionToStep(currentStepIdx + 1, 'next'); });
 
   closeBtn.addEventListener('click', closeOverlay);
   backdrop.addEventListener('click', closeOverlay);
   document.addEventListener('keydown', e => {
     if (!storedRect) return;
     if (e.key === 'Escape') closeOverlay();
-    if (e.key === 'ArrowLeft'  && currentStepIdx > 0)                        transitionToStep(currentStepIdx - 1, 'prev');
-    if (e.key === 'ArrowRight' && currentStepIdx < processSteps.length - 1) transitionToStep(currentStepIdx + 1, 'next');
+    if (e.key === 'ArrowLeft'  && currentStepIdx > 0)                             transitionToStep(currentStepIdx - 1, 'prev');
+    if (e.key === 'ArrowRight' && currentStepIdx < getActiveItems().length - 1)   transitionToStep(currentStepIdx + 1, 'next');
   });
 </script>
